@@ -6,6 +6,7 @@ import config
 def model_3_1():
   model = models.Sequential()
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -22,6 +23,7 @@ def model_3_2():
   model = models.Sequential()
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -38,7 +40,7 @@ def model_3_3():
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
-
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -57,6 +59,7 @@ def model_3_5():
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -76,6 +79,7 @@ def model_3_7():
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -98,7 +102,7 @@ def model_3_9():
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
   model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(config.IMAGE_HEIGHT, config.IMAGE_WIDTH, 1)))
-  
+  model.add(layers.Flatten())
   model.add(layers.Dense(512, activation='relu'))
   model.add(layers.Dense(128, activation='relu'))
   model.add(layers.Dense(config.OUTPUTS, activation='softmax'))
@@ -229,4 +233,5 @@ def model_9_4():
                   metrics=['accuracy'])
 
   return model
+
 

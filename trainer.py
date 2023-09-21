@@ -10,7 +10,7 @@ import pdb
 
 def trainner(model, name):
     import pdb
-    #pdb.set_trace()
+    pdb.set_trace()
     print(model.summary())
     train_data, train_labels = load_train_data()
     test_data, test_labels = load_test_data()
