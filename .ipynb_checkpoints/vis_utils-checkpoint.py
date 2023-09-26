@@ -116,7 +116,7 @@ def vis_layer_loss_accuracy():
         axs[1].set_ylabel('validation loss')
     plt.tight_layout()
 
-    fig.savefig(config.IMAGES_DIR +'layer_3_loss.png', dpi=600)
+    fig.savefig('layer_3_loss.png', dpi=600)
 
 
     fig, axs = plt.subplots(1, 2, figsize=(15,6), sharey=True )
@@ -140,7 +140,7 @@ def vis_layer_loss_accuracy():
         axs[1].set_ylabel('validation accuracy')
 
     plt.tight_layout()
-    fig.savefig(config.IMAGES_DIR +'layer_3_accuracy.png', dpi=600)
+    fig.savefig('layer_3_accuracy.png', dpi=600)
 
     
     
